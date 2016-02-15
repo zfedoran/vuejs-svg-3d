@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>SVG 3D</title>
+
+        <!-- Vendor/3rd Party -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/toji/gl-matrix/master/dist/gl-matrix-min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+
+        <!-- App Files -->
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+        <div id="app">
+
+            <svg v-bind:width  = "device.width"
+                 v-bind:height = "device.height"
+                 viewPort      = "0 0 {{device.width}} {{device.height}}"
+                 version       = "1.1"
+                 xmlns         = "http://www.w3.org/2000/svg">
+
+                <polygon v-bind:points = "poly.points"
+                         v-bind:style  = "'fill:#' + poly.color + ';'"
+                         v-for         = "poly in polygons"/>
+            </svg>
+
+        </div>
+    </body>
+</html>
