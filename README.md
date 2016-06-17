@@ -9,4 +9,4 @@ This is a tiny 3d software renderer using SVG polys. Just enough code to get a c
 
 ## Live Demo
 
-https://jsfiddle.net/okv0rgrk/1704/
+https://jsfiddle.net/okv0rgrk/4481/
